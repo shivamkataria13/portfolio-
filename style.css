@@ -616,3 +616,89 @@ header .navbar li:hover{
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer{
+    bottom: 1.3rem;
+    z-index: 1000;
+    padding-inline: 1rem;
+    overflow: hidden;
+}
+
+footer .footerLinks{
+    width: 30vw;
+}
+
+footer .footerLinks img{
+    transition: all .1s linear;
+    cursor: pointer;
+}
+
+footer .footerLinks img:hover{
+    scale: 1.2;
+}
+
+@media (min-width:550px) {
+    
+    footer svg:nth-child(1){
+        width: 55vw;
+    }
+
+    footer svg:nth-child(3){
+        width: 13vw;
+    }
+
+    footer .footerLinks{
+        width: 25vw;
+    }
+
+}
+
+
+@media (min-width:700px) {
+    
+    footer svg:nth-child(1){
+        width: 58vw;
+    }
+
+    footer svg:nth-child(3){
+        width: 16vw;
+    }
+
+    footer .footerLinks{
+        width: 20vw;
+    }
+
+}
+
+@media (min-width:1000px) {
+    
+    footer svg:nth-child(1){
+        width: 75vw;
+    }
+
+    footer svg:nth-child(3){
+        width: 14vw;
+    }
+
+    footer .footerLinks{
+        width: 9vw;
+    }
+
+}
