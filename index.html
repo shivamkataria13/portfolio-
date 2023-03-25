@@ -29,7 +29,7 @@
 
             <div class="opText relative">
                 <p class="opTextP1 absolute     animate__animated animate__fadeInLeft animate__slow">There's a new</p>
-                <h1 class=" animate__animated animate__fadeIn animate__delay-1s">&lt;Web Dev&gt;</h1>
+                <h1 class="maintext animate__animated animate__fadeIn animate__delay-1s">&lt;Web Dev&gt;</h1>
                 <p class="opTextP2 absolute    animate__animated animate__fadeInRight animate__slow">in town.</p>
             </div>
 
@@ -41,7 +41,7 @@
         </section> -->
         
 
-        <header class="header  flex items-center justify-between">
+        <header class="header  flex items-center justify-between    animate__animated animate__fadeIn animate__slower">
 
             
             <div class="logo">
@@ -53,7 +53,7 @@
 
             <nav>
 
-                <button class="button-two" aria-controls="primary-2" aria-expanded="false">
+                <button class="navBtn" onclick="toggleblur()" aria-controls="primary-2" aria-expanded="false">
 
                     <svg class="hamburger" stroke="var(--buttoncolor)" viewBox = "0 0 100 100" width="2rem">
         
@@ -92,31 +92,50 @@
         </header>
 
 
-        <section class="home">
+        <section class="home text-center" id="blur">
 
-            <div class="introImg">
+            <div class="container animate__animated animate__fadeInDownBig">
+                <!-- <div class="card"> -->
+                    <div class="introImg ">
+                    </div>
             </div>
+                <!-- <div class="blob"></div> -->
+            
+
         
 
-            <div class="introText">
+            <div class="introText ">
 
-                <p>Hey there! I'm-</p>
-                <h1>&lt;Shivam Kataria&gt;</h1>
-                <p>a self taught web developer</p>
+                <p class="animate__animated animate__fadeIn animate__slower">Hey there! I'm-</p>
+                <h1 class="maintext   animate__animated animate__fadeIn animate__slow animate__delay-1s">&lt;Shivam Kataria&gt;</h1>
+                <p class="animate__animated animate__fadeIn animate__slower">a self taught web developer.</p>
 
             </div>
+            
 
-            <!-- <img src="" alt=""> -->
-            <button class="aboutMeBtn">About me</button>
+            <div class="introButton introText animate__animated animate__fadeIn animate__delay-3s">
+                <!-- <img src="" alt=""> -->
+                <button class="aboutMeBtn">About me</button>
+            </div>
+
 
 
         </section>
 
 
+        <section class="aboutMe" id="blur">
 
-        <footer>
+            
+
+        </section>
 
 
+
+        <footer class="fixed">
+
+            <svg height="10" width="60%">
+                <line x1="0"  x2="190" style="stroke:rgb(253, 253, 253); stroke-width:2.5" />
+            </svg>
 
         </footer>
 

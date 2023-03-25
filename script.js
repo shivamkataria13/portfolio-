@@ -1,4 +1,5 @@
-const buttontwo = document.querySelector(".button-two")
+// nav button open and close
+const buttontwo = document.querySelector(".navBtn")
 
 
 buttontwo.addEventListener('click', ()=>{
@@ -12,9 +13,28 @@ buttontwo.addEventListener('click', ()=>{
 })
 
 
-
+// opening navbar
 const navbar = document.querySelector(".navbar")
 
 buttontwo.addEventListener('click', ()=>{
-    navbar.classList.toggle('active')
+    if(!navbar.classList.contains('active')){
+        navbar.classList.add('active')
+    }else{
+        navbar.classList.remove('active')
+    }
 })
+
+
+
+
+
+
+
+
+// blurring the bg when nav opens
+
+const toggleblur=()=>{
+    const blur = document.getElementById('blur')
+    blur.classList.toggle('blurbg')
+}
+
