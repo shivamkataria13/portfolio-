@@ -18,78 +18,78 @@
 
 <body>
 
+
+
+    <header class="header  flex items-center justify-between    animate__animated animate__fadeIn animate__slower">
+    
+        
+        <div class="logo">
+            <img src="/assets/arrowUp.svg" alt="">
+        </div>
+        
+    
+    
+    
+        <nav>
+    
+            <button class="navBtn" onclick="toggleblur()" aria-controls="primary-2" aria-expanded="false">
+    
+                <svg class="hamburger" stroke="var(--buttoncolor)" viewBox = "0 0 100 100" width="2rem">
+    
+                    <line class="top line" 
+                            x1="85" x2="15" y1="40" y2="40"   
+                            stroke-width="10" 
+                            stroke-linecap="round"
+                            stroke-dasharray="80"
+                            stroke-dashoffset="0"></line>
+    
+                    <line class="bottom line" 
+                            x1="15" x2="85" y1="60" y2="60" 
+                            stroke-width="10" 
+                            stroke-linecap="round"
+                            stroke-dasharray="80"
+                            stroke-dashoffset="0">
+                    </line>
+                    
+                </svg>
+    
+            </button>
+    
+    
+            <ul class="navbar  flex flex-col">
+                <li><a href="">HOME</li></a>
+                <li><a href="">ABOUT ME</li></a>
+                <li><a href="">PROJECTS</li></a>
+                <li><a href="">CONTACT</li></a>
+            </ul>
+    
+        </nav>
+    
+    
+    
+    
+    </header>
+
+
+    <!-- <section class="openingPage flex items-center justify-center relative">
+
+        <div class="opText relative">
+            <p class="opTextP1 absolute     animate__animated animate__fadeInLeft animate__slow">There's a new</p>
+            <h1 class="maintext animate__animated animate__fadeIn animate__delay-1s">&lt;Web Dev&gt;</h1>
+            <p class="opTextP2 absolute    animate__animated animate__fadeInRight animate__slow">in town.</p>
+        </div>
+
+        
+        <div class="opButton flex items-center justify-center absolute   animate__animated animate__bounceIn animate__slow animate__delay-2s">
+            <img src="/assets/arrowUp.svg" alt="">
+        </div>
+
+    </section> -->
+    
+
     <main class="main">
 
 
-
-
-
-
-        <!-- <section class="openingPage flex items-center justify-center relative">
-
-            <div class="opText relative">
-                <p class="opTextP1 absolute     animate__animated animate__fadeInLeft animate__slow">There's a new</p>
-                <h1 class="maintext animate__animated animate__fadeIn animate__delay-1s">&lt;Web Dev&gt;</h1>
-                <p class="opTextP2 absolute    animate__animated animate__fadeInRight animate__slow">in town.</p>
-            </div>
-
-            
-            <div class="opButton flex items-center justify-center absolute   animate__animated animate__bounceIn animate__slow animate__delay-2s">
-                <img src="/assets/arrowUp.svg" alt="">
-            </div>
-
-        </section> -->
-        
-
-        <header class="header  flex items-center justify-between    animate__animated animate__fadeIn animate__slower">
-
-            
-            <div class="logo">
-                <img src="/assets/arrowUp.svg" alt="">
-            </div>
-            
-
-
-
-            <nav>
-
-                <button class="navBtn" onclick="toggleblur()" aria-controls="primary-2" aria-expanded="false">
-
-                    <svg class="hamburger" stroke="var(--buttoncolor)" viewBox = "0 0 100 100" width="2rem">
-        
-                        <line class="top line" 
-                                x1="85" x2="15" y1="40" y2="40"   
-                                stroke-width="10" 
-                                stroke-linecap="round"
-                                stroke-dasharray="80"
-                                stroke-dashoffset="0"></line>
-        
-                        <line class="bottom line" 
-                                x1="15" x2="85" y1="60" y2="60" 
-                                stroke-width="10" 
-                                stroke-linecap="round"
-                                stroke-dasharray="80"
-                                stroke-dashoffset="0">
-                        </line>
-                        
-                    </svg>
-        
-                </button>
-
-
-                <ul class="navbar  flex flex-col fixed">
-                    <li><a href="">HOME</li></a>
-                    <li><a href="">ABOUT ME</li></a>
-                    <li><a href="">PROJECTS</li></a>
-                    <li><a href="">CONTACT</li></a>
-                </ul>
-
-            </nav>
-
-
-
-
-        </header>
 
 
         <section class="home text-center" id="blur">
@@ -114,7 +114,6 @@
             
 
             <div class="introButton introText animate__animated animate__fadeIn animate__delay-3s">
-                <!-- <img src="" alt=""> -->
                 <button class="aboutMeBtn">About me</button>
             </div>
 
@@ -122,38 +121,54 @@
 
         </section>
 
+ 
+        <section class="aboutMe   text-center" id="blur">
 
-        <section class="aboutMe" id="blur">
+            <div class="aboutText     flex justify-center items-center">
+                <p> <span>"</span> Hey! Im Shivam, a Self Taught Web Developer. I love to design and code. Also i love music. <span>"</span></p>
+            </div>
 
-            
+            <h1 class="maintext">MY SKILLS -</h1>
+
+            <div class="skillsImg   flex justify-center items-center">
+                <img src="assets/html-file-type-svgrepo-com.svg" alt="">
+                <img src="assets/css-3-svgrepo-com.svg" alt="">
+                <img src="assets/javascript-svgrepo-com.svg" alt="">
+                <img src="assets/react icon.svg" alt="">
+                <img src="assets/tailwind-svgrepo-com.svg" alt="">
+                <img src="assets/bootstrap-svgrepo-com.svg" alt="">
+                <img src="assets/figma-logo-duotone-svgrepo-com (1).svg" alt="">
+            </div>
 
         </section>
 
 
 
-        <footer class="fixed flex items-center justify-center">
-
-            <svg height="10" width="50vw">
-                <line x1="0%"  x2="100%" viewBox="0 0 512 512" preserveAspectRatio="none" style="stroke:#cdcdcd; stroke-width:2.5" />
-            </svg>
-            
-            
-            <div class="footerLinks flex items-center justify-evenly">
-                <a href=""><img src="assets/instagram-cat-tail-svgrepo-com.svg" alt=""></a>
-                <a href=""><img src="assets/twitter-svgrepo-com.svg" alt=""></a>
-                <a href=""><img src="assets/github-svgrepo-com.svg" alt=""></a>
-            </div> 
-            
-            <svg height="10" width="12vw">
-                <line x1="0%"  x2="100%" viewBox="0 0 512 512" preserveAspectRatio="none" style="stroke:#cdcdcd; stroke-width:2.5" />
-            </svg>
-
-        </footer>
-
-
+        
+        
     </main>
     
 
+
+    <footer class="fixed flex items-center justify-center">
+
+        <svg height="10" width="50vw">
+            <line x1="0%"  x2="100%" viewBox="0 0 512 512" preserveAspectRatio="none" style="stroke:#cdcdcd; stroke-width:2.5" />
+        </svg>
+        
+        
+        <div class="footerLinks flex items-center justify-evenly">
+            <a href="https://instagram.com/ayy_shivammm?igshid=YmMyMTA2M2Y="><img src="assets/instagram-cat-tail-svgrepo-com.svg" alt=""></a>
+            <a href="https://twitter.com/ayy_shivammm"><img src="assets/twitter-svgrepo-com.svg" alt=""></a>
+            <a href="https://github.com/shivamkataria13"><img src="assets/github-svgrepo-com.svg" alt=""></a>
+        </div> 
+        
+        <svg height="10" width="12vw">
+            <line x1="0%"  x2="100%" viewBox="0 0 512 512" preserveAspectRatio="none" style="stroke:#cdcdcd; stroke-width:2.5" />
+        </svg>
+
+    </footer>
+    
 
 </body>
 </html>
