@@ -20,7 +20,7 @@
 
 
 
-    <header class="header  flex items-center justify-between    animate__animated animate__fadeIn animate__slower">
+    <header class="header    hidden  flex items-center justify-between    animate__animated animate__fadeInRight animate__slow">
     
         
         <div class="logo">
@@ -32,7 +32,7 @@
     
         <nav>
     
-            <button class="navBtn" onclick="toggleblur()" aria-controls="primary-2" aria-expanded="false">
+            <button class="navBtn" aria-controls="primary-2" aria-expanded="false">
     
                 <svg class="hamburger" stroke="var(--buttoncolor)" viewBox = "0 0 100 100" width="2rem">
     
@@ -71,11 +71,11 @@
     </header>
 
 
-    <!-- <section class="openingPage flex items-center justify-center relative">
+    <section class="openingPage flex items-center justify-center relative        animate__animated animate__fadeInDownBig animate__slow">
 
         <div class="opText relative">
             <p class="opTextP1 absolute     animate__animated animate__fadeInLeft animate__slow">There's a new</p>
-            <h1 class="maintext animate__animated animate__fadeIn animate__delay-1s">&lt;Web Dev&gt;</h1>
+            <h1 class="maintext animate__animated animate__fadeIn animate__delay-1s">   <span class="animate__animated animate__flash animate__slower  animate__delay-3s">&lt;</span>     Web Dev      <span class="animate__animated animate__flash animate__slower animate__delay-3s">&gt;</span>     </h1>
             <p class="opTextP2 absolute    animate__animated animate__fadeInRight animate__slow">in town.</p>
         </div>
 
@@ -84,15 +84,20 @@
             <img src="/assets/arrowUp.svg" alt="">
         </div>
 
-    </section> -->
+    </section>
     
 
-    <main class="main">
 
 
 
 
-        <section class="home text-center" id="blur home">
+
+    
+    <main class="main  hidden">
+        
+    
+
+        <section class="home   sections     text-center" id="blur home">
 
             <div class="container animate__animated animate__fadeInDownBig">
                 <!-- <div class="card"> -->
@@ -107,7 +112,7 @@
             <div class="introText ">
 
                 <p class="animate__animated animate__fadeIn animate__slower">Hey there! I'm-</p>
-                <h1 class="maintext   animate__animated animate__fadeIn animate__slow animate__delay-1s">&lt;Shivam Kataria&gt;</h1>
+                <h1 class="maintext   animate__animated animate__fadeIn animate__slow animate__delay-1s">           <span class="animate__animated animate__flash animate__slower animate__infinite">&lt;</span>Shivam Kataria<span  class="animate__animated animate__flash animate__slower animate__infinite">&gt;</span>        </h1>
                 <p class="animate__animated animate__fadeIn animate__slower">a self taught web developer.</p>
 
             </div>
@@ -122,9 +127,9 @@
         </section>
 
  
-        <section class="aboutMe   text-center" id="blur aboutMe">
+        <section class="aboutMe   sections     text-center" id="blur aboutMe">
 
-            <div class="aboutText     flex justify-center items-center        animate__animated animate__fadeIn animate__slower">
+            <div class="aboutText     flex justify-center items-center        animate__animated animate__fadeIn">
                 <p> <span>"</span> Hey! Im Shivam, a Self Taught Web Developer. I love to design and code. Also i love music. <span>"</span></p>
             </div>
 
@@ -138,15 +143,53 @@
                 <img src="assets/tailwind-svgrepo-com.svg" alt="">
                 <img src="assets/bootstrap-svgrepo-com.svg" alt="">
                 <img src="assets/figma-logo-duotone-svgrepo-com (1).svg" alt="">
+                <img src="assets/python-127-svgrepo-com.svg" alt="">
             </div>
 
         </section>
 
 
 
-        <section class="contact">
+        <section class="projects  sections     text-center">
 
-            <div class="contactText    text-center     animate__animated animate__flipInX animate__slow">
+            <h1 class="maintext">SOME OF MY WORK -</h1>
+
+
+
+            <div class="projectsShow  grid items-center justify-center">
+
+                
+                <div class="projectsImg">
+                    <p class="projectNo">01</p>
+                    <img src="/assets/335468.jpg" alt="">
+                </div>
+
+                <div class="projectsText">
+                    <h2>XO</h2>
+                    <p>Till we overdose</p>
+                </div>
+            </div>
+
+
+            <!-- <div class="projectsShow      grid ">
+
+                <img src="/assets/335468.jpg" alt="">
+
+                <div class="projectsText">
+                    <h2>XO</h2>
+                    <p>Till we overdose</p>
+                </div>
+
+            </div> -->
+
+        </section>
+        
+        
+        
+        
+        <section class="contact    sections    ">
+
+            <div class="contactText    text-center     animate__animated animate__flipInX animate__slower">
                 <h1 class="maintext">DONT BE SHY, SAY HI <span>:)</span></h1>
                 <p><a href="mailto:shivamsinghkataria13@gmail.com">@shivamsinghkataria13</a></p>
             </div>
@@ -184,13 +227,21 @@
 
         </section>
 
-        
+
+
         
     </main>
     
 
 
-    <footer class="fixed flex items-center justify-center">
+
+
+
+
+
+
+
+    <footer class="fixed   hidden  flex items-center justify-center      animate__animated animate__fadeInLeft animate__slow ">
 
         <svg height="10" width="50vw">
             <line x1="0%"  x2="100%" viewBox="0 0 512 512" preserveAspectRatio="none" style="stroke:#cdcdcd; stroke-width:2.5" />

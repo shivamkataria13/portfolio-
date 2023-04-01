@@ -101,6 +101,9 @@ body{
     height: 82vh;
     overflow: hidden;
     padding-inline:1.3rem ;
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
 @media (min-width:1000px) {
@@ -115,7 +118,20 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* OPENING PAGE */
+
 
 .openingPage{
     height: 90vh;
@@ -125,6 +141,12 @@ body{
     background-image: linear-gradient(180deg, rgb(0, 7, 43) 0%, rgb(0, 14, 51) 16%, rgb(0, 7, 40) 36%, rgb(0, 2, 18) 100%);
     border-radius: 0 0 2.3rem 2.3rem;
 }
+
+
+
+
+
+
 
 .openingPage h1{
     font-size:  clamp(3.5rem, 13vw, 7rem);
@@ -210,8 +232,15 @@ body{
 
 
 
+.sections{
+    min-height: 100%;
+    max-height: 100%;
+    scroll-snap-align: start;
+}
 
-
+.section.show{
+    display: block;
+}
 
 
 
@@ -221,6 +250,7 @@ body{
 
 header{
     padding: 1rem;
+    transition: all .3s ease-in-out;
 }
 
 header img{
@@ -325,6 +355,7 @@ header .navbar{
     font-size: clamp(1.1rem, 1.1vw, 1.2rem);
     
     padding: 7.5rem 2rem;
+    /* backdrop-filter: blur(1rem); */
     
     background-image: linear-gradient(180deg, #8f627d44 0%, #d0298d20 100%);
 
@@ -344,12 +375,20 @@ header .navbar.active{
 
 
 
+
 header .navbar li{
     width: max-content;
     transition: all .2s ease-in-out;
     cursor: pointer;
 }
 header .navbar li:hover{
+    color: #ff0099;
+    transform: scale(1.05);
+}
+
+
+
+.navbar li.activePage{
     color: #ff0099;
     transform: scale(1.05);
 }
@@ -420,12 +459,12 @@ header .navbar li:hover{
 .home{
     display: grid;
     grid-template-rows: 47% 35% 1fr;
-    gap: 2rem;
+    gap: 1rem;
     font-family: var(--oswald);
     transition: filter .3s ease-in-out;
     /* position: relative; */
     /* z-index: -1; */
-    display: none;
+    
 }
 
 
@@ -439,6 +478,7 @@ header .navbar li:hover{
     z-index: -1;
     /* position: fixed; */
 }
+
 
 .home .introImg{
     /* border-radius: 50%; */
@@ -479,7 +519,6 @@ header .navbar li:hover{
         border-radius: 100% 56% 56% 100% / 100% 100% 72% 72%;
     }
 }
-
 
 
 
@@ -721,9 +760,7 @@ footer .footerLinks img:hover{
 
 /* ABOUT ME */
 
-.aboutMe{
-    display: none;
-}
+
 
 .aboutMe .aboutText{
     margin-top: 9rem;
@@ -758,7 +795,7 @@ footer .footerLinks img:hover{
     padding-inline: 1rem;
 }
 .aboutMe .skillsImg img{
-    max-width: 1.9rem
+    max-width: 1.6rem
 }
 
 
@@ -832,7 +869,6 @@ footer .footerLinks img:hover{
 .contact{
     display: grid;
     grid-template-rows: .70fr 1fr;
-    height: 100%;
 
     justify-content: center;
 }
@@ -861,6 +897,7 @@ footer .footerLinks img:hover{
     font-size: .7rem;
     margin-top: 1rem;
     letter-spacing: .06em;
+    cursor: pointer;
 }
 
 
@@ -1012,6 +1049,118 @@ footer .footerLinks img:hover{
     .contactBtn{
         margin: 0;
         margin-top: 1.6rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROJECTS */
+
+
+.projects h1{
+    font-size: clamp(1.6rem, 8vw, 2.6rem);
+    margin-top: 2.6rem;
+}
+
+.projectsShow{
+    margin-top: 4rem;
+}
+
+.projectsImg{
+    position: relative;
+    /* z-index: -1; */
+}
+
+.projectsImg:hover:before{
+    content: "";
+}
+
+
+.projectNo{
+    position: absolute;
+    top: -2.5rem;
+    left: -1rem;
+
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: white;
+
+    transition: all .3s ease-in-out;
+}
+
+.projectsText{
+    margin-top: 3rem;
+}
+
+.projectsText h2{
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+}
+.projectsText p{
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+}
+
+
+
+
+@media (min-width:500px) {
+    
+    .projectsShow{
+        padding-inline: 4rem;
+        margin-top: 3rem;
+    }
+    
+    .projects img{
+        max-width: 26rem;
+    }
+    
+}
+
+@media (min-width:800px) {
+
+    .projectNo{
+        top: -3.5rem;
+        left: -1.5rem;
+    }
+
+}
+
+@media (min-width:1000px){
+    
+    .projectsShow{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects img{
+        max-width: 33rem;
+    }
+    
+    
+}
+
+@media (min-width:1100px){
+
+    .projectsShow{
+        padding-inline: 8rem;
+    }
+
+    .projectNo{
+        top: -4.5rem;
+        left: -2rem;
     }
 
 }
