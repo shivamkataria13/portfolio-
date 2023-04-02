@@ -69,23 +69,23 @@ opBtn.addEventListener('click', ()=>{
 
 // sections scroll animation
 
-const sections = document.querySelectorAll('.sections')
+// const sections = document.querySelectorAll('.sections')
 
-const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        entry.target.classList.add('show')
-        // entry.target.classList.add('animate__animated', entry.isIntersecting)
-        // entry.target.classList.add('animate__fadeIn', entry.isIntersecting)
-        // entry.target.classList.add('animate__delay-2s', entry.isIntersecting)
-    })
-    console.log(entries)
-},{
-    threshold:.9,
-    // rootMargin: '-20px',
-    root: document.querySelector('.main'),
-})
+// const observer = new IntersectionObserver(entries=>{
+//     entries.forEach(entry=>{
+//         entry.target.classList.add('show')
+//         // entry.target.classList.add('animate__animated', entry.isIntersecting)
+//         // entry.target.classList.add('animate__fadeIn', entry.isIntersecting)
+//         // entry.target.classList.add('animate__delay-2s', entry.isIntersecting)
+//     })
+//     console.log(entries)
+// },{
+//     threshold:.9,
+//     // rootMargin: '-20px',
+//     root: document.querySelector('.main'),
+// })
 
 
-sections.forEach(section=>{
-    observer.observe(section);
-})
+// sections.forEach(section=>{
+//     observer.observe(section);
+// })

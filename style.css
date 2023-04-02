@@ -54,6 +54,11 @@
 
 html{
     scroll-behavior: smooth;
+    /* overflow: scroll; */
+}
+
+section{
+    scroll-behavior: smooth;
 }
 
 *{
@@ -257,6 +262,7 @@ header img{
     width: 3rem;
     cursor: pointer;
 }
+
 
 
 
