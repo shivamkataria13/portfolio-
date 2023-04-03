@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
-@import url('https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT/modules/326252995');
+@import url('https://fonts.cdnfonts.com/css/neoneon');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
-
-
-
 
 
 /* SCROLLBAR */
@@ -30,7 +26,7 @@
 
 :root{ 
     --neonderthaw: 'Neonderthaw', cursive;
-    --neoneon: 'NEONEON', sans-serif;
+    --neoneon: 'neoneon', sans-serif;
     --roboto: 'Roboto Condensed', sans-serif;
     --oswald: 'Oswald', sans-serif;
 
@@ -52,19 +48,16 @@
 
 
 
-html{
-    scroll-behavior: smooth;
-    /* overflow: scroll; */
-}
-
 section{
     scroll-behavior: smooth;
 }
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 img, video{
     height: 100%;
@@ -103,11 +96,13 @@ body{
 .main{
     display: flex;
     flex-direction: column;
-    height: 82vh;
-    overflow: hidden;
-    padding-inline:1.3rem ;
+    gap: 6rem;
 
+    height: 82vh;
+    padding-inline:1.3rem ;
+    
     scroll-snap-type: y mandatory;
+    overflow: hidden;
     overflow-y: scroll;
 }
 
@@ -256,6 +251,7 @@ body{
 header{
     padding: 1rem;
     transition: all .3s ease-in-out;
+    color: white;
 }
 
 header img{
@@ -384,12 +380,12 @@ header .navbar.active{
 
 header .navbar li{
     width: max-content;
-    transition: all .2s ease-in-out;
+    transition: all .31s ease-in-out;
     cursor: pointer;
 }
 header .navbar li:hover{
     color: #ff0099;
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
 }
 
 
@@ -477,8 +473,8 @@ header .navbar li:hover{
 .container {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: relative;
     overflow: hidden;
     z-index: -1;
@@ -487,10 +483,8 @@ header .navbar li:hover{
 
 
 .home .introImg{
-    /* border-radius: 50%; */
-    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-    overflow: hidden;
-
+    position: relative;
+    
     /* background-image: url('/assets/WhatsApp\ Image\ 2023-03-15\ at\ 14.30.48.jpg'); */
     background-image: url('/assets/WhatsApp\ Image\ 2023-03-15\ at\ 14.30.48.jpg');
     
@@ -500,18 +494,34 @@ header .navbar li:hover{
     background-position: -1rem -4rem;
     background-repeat: no-repeat;
     background-size: 120%;
-
+    
     margin: auto;
     margin-top: 1rem;
 
+    /* border: .5em solid white; */
+    
     animation: animateIntroPic 6s linear infinite;
-    border: .5rem solid white;
 }
 
-.home .introImg:hover{
-    border-radius: 50%;
-    animation: none;
+.home .introImg::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -.45em;
+    left: -.45em;
+    height: 107%;
+    width: 107%;
+
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    background: linear-gradient(-225deg, #ff057e 0%, #8c0b93 50%, #321575 100%);
+
+    z-index: -1;
+
+    animation: animateIntroPic 6s linear infinite;
 }
+
+
+
 
 
 @keyframes animateIntroPic{
@@ -607,7 +617,6 @@ header .navbar li:hover{
     
     .home{
         grid-template-rows: 42% 40% 1fr;
-        gap: 1.3rem;
     }
 
 }
@@ -615,7 +624,7 @@ header .navbar li:hover{
 @media (min-width:1000px) {
 
     .home{
-        grid-template-rows: 1.5fr .25fr;
+        grid-template-rows: 1.7fr .2fr;
         grid-template-columns: 1fr .55fr;
 
         align-items: center;
@@ -631,8 +640,10 @@ header .navbar li:hover{
     .home .container{
         grid-column: 2;
         grid-row: span 2;
-        margin-top: -5rem;
+        /* margin-top: -5rem; */
+        height: 100%;
     }
+
 
     .home .introText{
         grid-column: 1;
@@ -1129,6 +1140,10 @@ footer .footerLinks img:hover{
         padding-inline: 4rem;
         margin-top: 3rem;
     }
+
+    .projectsText{
+        margin-top: 2rem;
+    }
     
     .projects img{
         max-width: 26rem;
@@ -1155,6 +1170,9 @@ footer .footerLinks img:hover{
         max-width: 33rem;
     }
     
+    .projectsText{
+        margin: 0;
+    }
     
 }
 
