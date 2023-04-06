@@ -1,3 +1,40 @@
+
+ScrollOut({
+    scrollingElement: ".main",
+
+    threshold: .4
+    
+  });
+
+
+
+
+  const reload=()=>{
+    alert('thankyou for contacting! i\'ll get back to you shortly.')
+    location.reload()
+  }
+
+
+
+
+// active nav
+const sections = document.querySelectorAll('.sections')
+const navLi= document.querySelectorAll('nav ul li')
+
+window.addEventListener('scroll', ()=>{
+    let currentSection = '';
+    
+    sections.forEach(section =>{
+        const sectionTop = section.getBoundingClientRect();
+        console.log(sectionTop)
+    })
+    
+})
+
+
+
+
+
 // nav button open and close
 const buttontwo = document.querySelector(".navBtn")
 
@@ -58,37 +95,15 @@ opBtn.addEventListener('click', ()=>{
 
 
 
-// blurring the bg when nav opens
-
-// const toggleblur=()=>{
-//     const blur = document.getElementById('blur')
-//     blur.classList.toggle('blurbg')
-// }
 
 
 
 
 
 
-// sections scroll animation
-
-// const sections = document.querySelectorAll('.sections')
-
-// const observer = new IntersectionObserver(entries=>{
-//     entries.forEach(entry=>{
-//         entry.target.classList.add('show')
-//         // entry.target.classList.add('animate__animated', entry.isIntersecting)
-//         // entry.target.classList.add('animate__fadeIn', entry.isIntersecting)
-//         // entry.target.classList.add('animate__delay-2s', entry.isIntersecting)
-//     })
-//     console.log(entries)
-// },{
-//     threshold:.9,
-//     // rootMargin: '-20px',
-//     root: document.querySelector('.main'),
-// })
 
 
-// sections.forEach(section=>{
-//     observer.observe(section);
-// })
+
+
+
+

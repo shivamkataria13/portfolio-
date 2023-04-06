@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
 
 
+/* active nav, nav bgblur on mobile, projects page- horizontal scroll, hover effects*/
+
+
 /* SCROLLBAR */
 ::-webkit-scrollbar{
     width: .3rem;
@@ -24,8 +27,7 @@
 
 
 
-:root{ 
-    --neonderthaw: 'Neonderthaw', cursive;
+:root{
     --neoneon: 'neoneon', sans-serif;
     --roboto: 'Roboto Condensed', sans-serif;
     --oswald: 'Oswald', sans-serif;
@@ -35,6 +37,27 @@
 
     --buttoncolor: #c8c8c8;
 }
+
+
+
+/* reveal on scroll */
+/* [data-scroll] {
+    transition: all 2.6s;
+} */
+
+.sections[data-scroll="in"] {
+    opacity: 1;
+    transition: all 1.3s ease-in-out;
+}
+
+.sections[data-scroll="out"] {
+    opacity: 0;
+    transition: all .01s ease-in-out;
+}
+
+
+
+
 
 
 .maintext{
@@ -77,6 +100,7 @@ body{
     /* animation: bg-animate 10s infinite alternate; */
 
     overflow-x: hidden;
+    overscroll-behavior: contain;
 }
 
 /* @keyframes bg-animate {
@@ -473,8 +497,8 @@ header .navbar li:hover{
 .container {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
     z-index: -1;
@@ -494,8 +518,7 @@ header .navbar li:hover{
     background-position: -1rem -4rem;
     background-repeat: no-repeat;
     background-size: 120%;
-    
-    margin: auto;
+
     margin-top: 1rem;
 
     /* border: .5em solid white; */
@@ -1095,9 +1118,21 @@ footer .footerLinks img:hover{
     margin-top: 2.6rem;
 }
 
-.projectsShow{
+.projectsShowContainer{
     margin-top: 4rem;
+
+    display: grid;
+    grid-template-columns: 100% 100% 100%; 
+    gap: 3rem;
+
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
 }
+.projectsShow{
+    /* margin-left: 16rem; */
+    min-width: 100%;
+}
+
 
 .projectsImg{
     position: relative;
@@ -1116,7 +1151,8 @@ footer .footerLinks img:hover{
 
     font-size: clamp(3rem, 8vw, 6rem);
     color: white;
-
+    text-shadow: 0 0 1.3rem black;  
+    
     transition: all .3s ease-in-out;
 }
 
@@ -1126,6 +1162,7 @@ footer .footerLinks img:hover{
 
 .projectsText h2{
     font-size: clamp(1.6rem, 5vw, 2.6rem);
+    text-shadow: 0 0 3.1rem rgb(255, 255, 255);  
 }
 .projectsText p{
     font-size: clamp(1.1rem, 4vw, 1.6rem);
@@ -1137,7 +1174,7 @@ footer .footerLinks img:hover{
 @media (min-width:500px) {
     
     .projectsShow{
-        padding-inline: 4rem;
+        /* padding-inline: 4rem; */
         margin-top: 3rem;
     }
 
@@ -1161,10 +1198,6 @@ footer .footerLinks img:hover{
 }
 
 @media (min-width:1000px){
-    
-    .projectsShow{
-        grid-template-columns: 1fr 1fr;
-    }
 
     .projects img{
         max-width: 33rem;
@@ -1179,7 +1212,7 @@ footer .footerLinks img:hover{
 @media (min-width:1100px){
 
     .projectsShow{
-        padding-inline: 8rem;
+        /* padding-inline: 8rem; */
     }
 
     .projectNo{

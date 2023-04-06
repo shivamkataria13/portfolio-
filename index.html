@@ -24,7 +24,7 @@
     
         
         <div class="logo">
-            <img src="/assets/arrowUp.svg" alt="">
+            <a href="#home"><img src="/assets/arrowUp.svg" alt=""></a>
         </div>
         
     
@@ -98,7 +98,7 @@
     
 
         
-            <section  id="home"    class="home   sections     text-center">
+            <section   id="home"    class="home   sections     text-center ">
     
                 <div class="container animate__animated animate__fadeInDownBig">
                     <!-- <div class="card"> -->
@@ -120,7 +120,7 @@
                 
     
                 <div class="introButton introText animate__animated animate__fadeIn animate__delay-3s">
-                    <button class="aboutMeBtn">About me</button>
+                    <a href="#aboutMe"><button class="aboutMeBtn">About me</button></a>
                 </div>
     
     
@@ -130,15 +130,15 @@
 
 
         
-            <section  id="aboutMe"    class="aboutMe   sections     text-center">
+            <section data-scroll id="aboutMe"    class="aboutMe   sections     text-center  ">
     
-                <div class="aboutText     flex justify-center items-center        animate__animated animate__fadeIn">
+                <div class="aboutText     flex justify-center items-center        ">
                     <p> <span>"</span> Hey! Im Shivam, a Self Taught Web Developer. I love to design and code. Also i love music. <span>"</span></p>
                 </div>
     
-                <h1 class="maintext     animate__animated animate__fadeIn animate__slower">MY SKILLS -</h1>
+                <h1 class="maintext    ">MY SKILLS -</h1>
     
-                <div class="skillsImg   flex justify-center items-center      animate__animated animate__fadeInDown animate__delay-1s">
+                <div class="skillsImg   flex justify-center items-center      ">
                     <img src="assets/html-file-type-svgrepo-com.svg" alt="">
                     <img src="assets/css-3-svgrepo-com.svg" alt="">
                     <img src="assets/javascript-svgrepo-com.svg" alt="">
@@ -153,37 +153,57 @@
 
 
         
-            <section id="projects" class="projects  sections     text-center">
+            <section  data-scroll id="projects" class="projects  sections     text-center   ">
                 
+              
+              
                 <h1 class="maintext">SOME OF MY WORK -</h1>
                 
                 
                 
-                <div class="projectsShow  grid items-center justify-center">
-                    
-                    
-                    <div class="projectsImg">
-                        <p class="projectNo">01</p>
-                        <img src="/assets/335468.jpg" alt="">
+                <div class="projectsShowContainer  items-center  justify-evenly">
+
+                    <div class="projectsShow  ">
+                        
+                        <div class="projectsImg">
+                            <p class="projectNo">01</p>
+                            <img src="/assets/e-commerce project.png" alt="e-commerce project">
+                        </div>
+                        
+                        <div class="projectsText">
+                            <h2>Cara</h2>
+                            <p>E-Commerce website</p>
+                        </div>
                     </div>
                     
-                    <div class="projectsText">
-                        <h2>XO</h2>
-                        <p>Till we overdose</p>
-                    </div>
+                    
+                    <!-- <div class="projectsShow  ">
+                        
+                        <div class="projectsImg">
+                            <p class="projectNo">02</p>
+                            <img src="/assets/social media dashboard project.png" alt="social media dashboard project">
+                        </div>
+                        
+                        <div class="projectsText">
+                            <h2>Social Media Dashboard</h2>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="projectsShow  ">
+                        
+                        <div class="projectsImg">
+                            <p class="projectNo">02</p>
+                            <img src="/assets/social media dashboard project.png" alt="social media dashboard project">
+                        </div>
+                        
+                        <div class="projectsText">
+                            <h2>Social Media Dashboard</h2>
+                        </div>
+                    </div> -->
+                    
                 </div>
                 
-                
-                <!-- <div class="projectsShow      grid ">
-                    
-                    <img src="/assets/335468.jpg" alt="">
-                    
-                    <div class="projectsText">
-                        <h2>XO</h2>
-                        <p>Till we overdose</p>
-                    </div>
-                    
-                </div> -->
+            
                 
             </section>
         
@@ -191,49 +211,48 @@
         
         
         
-            <section id="contact" class="contact    sections    ">
+            <section data-scroll id="contact" class="contact    sections  ">
                 
-                <div class="contactText    text-center     animate__animated animate__flipInX animate__slower">
+                <div class="contactText    text-center     ">
                     <h1 class="maintext">DONT BE SHY, SAY HI <span>:)</span></h1>
                     <p><a href="mailto:shivamsinghkataria13@gmail.com">@shivamsinghkataria13</a></p>
                 </div>
                 
                 
-                <div class="contactForm    animate__animated animate__fadeIn animate__delay-1s">
+                <form class="contactForm  " onsubmit="reload()" action="https://formsubmit.co/shivamsinghkataria13@gmail.com" method="POST">
                     
-                    <div class="contactFormField">
-                        <input type="text" required="required">
-                        <span>Name</span>
-                        <i></i>
-                    </div>
-                    
-                    <div class="contactFormField">
-                        <input type="text" required="required">
-                        <span>Email</span>
-                        <i></i>
-                    </div>
-                    
-                    <div class="contactFormField">
-                        <input type="text" required="required">
-                        <span>Message</span>
-                        <i></i>
-                    </div>
-                    
+                        <div class="contactFormField">
+                            <input type="text" name="name" required="required">
+                            <span>Name</span>
+                            <i></i>
+                        </div>
+                        
+                        <div class="contactFormField">
+                            <input type="email" name="Email" required="required">
+                            <span>Email</span>
+                            <i></i>
+                        </div>
+                        
+                        <div class="contactFormField">
+                            <input type="text" name="message" required="required">
+                            <span>Message</span>
+                            <i></i>
+                        </div>
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
     
     
-                    <button class="contactBtn   animate__animated animate__fadeIn animate__delay-2s">
+                    <button type="submit" class="contactBtn   animate__animated animate__fadeIn animate__delay-2s">
                         Contact
                     </button>
     
-                </div>
+                </form>
     
     
     
             </section>
         
         
-
-
 
         
     </main>
@@ -266,6 +285,9 @@
 
     </footer>
     
+
+
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
 </body>
 </html>
