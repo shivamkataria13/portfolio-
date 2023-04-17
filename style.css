@@ -7,7 +7,7 @@
          url('/assets/font/neoneon-3zad6-webfont.woff') format('woff');
 }
 
-/* active nav, nav bgblur on mobile, projects page- horizontal scroll, hover effects*/
+/* active nav, nav z-index, nav bgblur on mobile, projects page- horizontal scroll, hover effects*/
 
 
 /* SCROLLBAR */
@@ -803,15 +803,15 @@ footer .footerLinks img:hover{
 /* ABOUT ME */
 
 
-
 .aboutMe .aboutText{
-    margin-top: 9rem;
-    font-size: clamp(1.1rem, 2.1vw, 1.6rem);
+    margin-top: 5rem;
 }
 
 .aboutMe .aboutText p{
-    padding-inline: 2rem;
+    font-size: clamp(1rem, 3vw, 1.3rem);
 }
+
+
 
 
 
@@ -828,7 +828,7 @@ footer .footerLinks img:hover{
     color: var(--pink);
     font-family: var(--neoneon);
     font-size: clamp(1.6rem, 9vw, 2.6rem);
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
 .aboutMe .skillsImg{
@@ -843,9 +843,13 @@ footer .footerLinks img:hover{
 
 
 @media (min-width:600px) {
+
+    .aboutMe .aboutText{
+        margin-top: 6rem;
+    }
     
     .aboutMe .aboutText p{
-        padding-inline: 6rem;
+        padding-inline: 3rem;
     }
 
 }
@@ -861,13 +865,13 @@ footer .footerLinks img:hover{
         max-width: 2.1rem
     }    
 
-
 }
+
 
 @media (min-width:1000px) {
     
     .aboutMe .aboutText p{
-        padding-inline: 16rem;
+        padding-inline: 6rem;
     }
 
     .aboutMe .skillsImg{
@@ -880,12 +884,19 @@ footer .footerLinks img:hover{
     }  
 
     .aboutMe h1{
-        margin-top: 9rem;
+        margin-top: 4rem;
     }
-
-
+    
+    
 }
 
+@media (min-width:1100px) {
+    
+    .aboutMe h1{
+        margin-top: 6rem;
+    }
+
+}
 
 
 
@@ -1124,21 +1135,22 @@ footer .footerLinks img:hover{
     margin-top: 4rem;
 
     display: grid;
-    grid-template-columns: 100% 100% 100%; 
+    place-items: center;
+    grid-template-columns: 100% 100%; 
     gap: 3rem;
 
-    overflow-x: scroll;
     overscroll-behavior-x: contain;
+    overflow: visible;
+    overflow-x: scroll;
 }
+
 .projectsShow{
-    /* margin-left: 16rem; */
     min-width: 100%;
 }
 
 
 .projectsImg{
     position: relative;
-    /* z-index: -1; */
 }
 
 .projectsImg:hover:before{
@@ -1200,6 +1212,13 @@ footer .footerLinks img:hover{
 }
 
 @media (min-width:1000px){
+
+    .projectsShow{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 6rem;
+    }
 
     .projects img{
         max-width: 33rem;

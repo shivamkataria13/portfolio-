@@ -6,9 +6,6 @@ ScrollOut({
     
   });
 
-
-
-
   const reload=()=>{
     alert('thankyou for contacting! i\'ll get back to you shortly.')
     location.reload()
