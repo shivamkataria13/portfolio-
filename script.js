@@ -57,10 +57,17 @@ buttontwo.addEventListener('click', ()=>{
         
     }else{
         navbar.classList.remove('active')
-        
     }
 })
 
+
+const navLinks = document.querySelectorAll('.links')
+console.log(navLinks)
+navLinks.forEach((navLink)=>{
+    navLink.addEventListener('click', ()=>{
+        navbar.classList.remove('active')
+    })
+})
 
 
 
