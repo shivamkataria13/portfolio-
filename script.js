@@ -57,10 +57,10 @@ const main = document.querySelector('.main')
 buttontwo.addEventListener('click', ()=>{
     if(!navbar.classList.contains('active')){
         navbar.classList.add('active')
-        main.classList.add('blurbg')
+        
     }else{
         navbar.classList.remove('active')
-        main.classList.remove('blurbg')
+        
     }
 })
 
