@@ -1136,11 +1136,11 @@ footer .footerLinks img:hover{
 
     display: grid;
     place-items: center;
-    grid-template-columns: auto auto; 
-    grid-gap: 30rem;
+    grid-template-columns: 100% 100%; 
+    gap: 3rem;
 
-    /* overscroll-behavior-x: contain;
-    overflow: visible; */
+    overscroll-behavior-x: contain;
+    overflow: visible;
     overflow-x: scroll;
 }
 
@@ -1188,25 +1188,17 @@ footer .footerLinks img:hover{
 @media (min-width:500px) {
     
     .projectsShow{
-         margin-left: 40rem;
-         
         /* padding-inline: 4rem; */
         margin-top: 3rem;
     }
 
     .projectsText{
-        margin-left: -15rem;
         margin-top: 2rem;
     }
     
     .projects img{
         max-width: 26rem;
     }
-
-    .projectNo{
-        margin-left: 4rem;
-    }
-
     
 }
 
@@ -1225,7 +1217,7 @@ footer .footerLinks img:hover{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        grid-gap: 6rem;
+        gap: 6rem;
     }
 
     .projects img{
@@ -1240,9 +1232,9 @@ footer .footerLinks img:hover{
 
 @media (min-width:1100px){
 
-    /* .projectsShow{ */
+    .projectsShow{
         /* padding-inline: 8rem; */
-    /* } */
+    }
 
     .projectNo{
         top: -4.5rem;
