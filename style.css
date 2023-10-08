@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
 
 @font-face {
@@ -86,6 +86,7 @@ section{
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 img, video{
     height: 100%;
     max-width: 1rem;
@@ -139,7 +140,6 @@ body{
     }
 
 }
-
 
 
 
@@ -278,6 +278,7 @@ header{
     padding: 1rem;
     transition: all .3s ease-in-out;
     color: white;
+
 }
 
 header img{
@@ -370,6 +371,8 @@ header img{
 
 
 
+
+
 header .navbar{
     position: absolute;
     gap: 2rem;
@@ -388,6 +391,7 @@ header .navbar{
     background-image: linear-gradient(180deg, #8f627d44 0%, #d0298d20 100%);
 
     transition: all .4s ease-in-out;
+
 }
 
 
@@ -411,7 +415,7 @@ header .navbar li{
 }
 header .navbar li:hover{
     color: #ff0099;
-    /* transform: scale(1.05); */
+    transform: scale(1.03);
 }
 
 
@@ -574,17 +578,20 @@ header .navbar li:hover{
 
 
 
-.home .introText p{
+.home .introText p{    
     text-align: left;
     margin-bottom: 1.3rem;
     font-size: clamp(1.1rem, 3vw, 1.8rem);
+}
+.home .introText h1, .home .introText p{
+    position: relative;
+    z-index: -1;
 }
 
 
 .home .introText p:nth-child(3){
     margin-top: 1.3rem;
-    text-align: right;
-    
+    text-align: right;   
 }
 
 .home .aboutMeBtn{
@@ -1126,36 +1133,52 @@ footer .footerLinks img:hover{
 /* PROJECTS */
 
 
+
 .projects h1{
     font-size: clamp(1.6rem, 8vw, 2.6rem);
     margin-top: 2.6rem;
+    height: max-content;
 }
 
 .projectsShowContainer{
-    margin-top: 4rem;
-
+    margin-top: 3.1rem;
+    
     display: grid;
+    grid-auto-flow: column;
     place-items: center;
-    grid-template-columns: 100% 100%; 
+    grid-auto-columns: 100%; 
     gap: 3rem;
 
     overscroll-behavior-x: contain;
     overflow: visible;
-    overflow-x: scroll;
+    overflow-x: scroll; 
+}
+
+.snap-inline{
+    scroll-snap-type: inline mandatory;
+}
+.snap-inline>*{
+    scroll-snap-align: start;
 }
 
 .projectsShow{
     min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    padding-bottom: 1rem;
 }
+
+/* .projectsShow:nth-child(1){
+    visibility: hidden;
+} */
 
 
 .projectsImg{
     position: relative;
 }
 
-.projectsImg:hover:before{
-    content: "";
-}
 
 
 .projectNo{
@@ -1168,10 +1191,11 @@ footer .footerLinks img:hover{
     text-shadow: 0 0 1.3rem black;  
     
     transition: all .3s ease-in-out;
+    z-index: 1000;
 }
 
 .projectsText{
-    margin-top: 3rem;
+    margin-top: 2.1rem;
 }
 
 .projectsText h2{
@@ -1183,13 +1207,26 @@ footer .footerLinks img:hover{
 }
 
 
+.projectsBtn{
+    width: 100%;
+    max-width: 30rem;
+    padding: 2rem 0rem;
+    gap: 3rem;
+
+}
+
+.projectsBtn button{
+    margin-top: 0;
+    padding: .3rem .6rem;
+
+}
 
 
 @media (min-width:500px) {
     
     .projectsShow{
         /* padding-inline: 4rem; */
-        margin-top: 3rem;
+        margin-top: .6rem;
     }
 
     .projectsText{
@@ -1215,9 +1252,10 @@ footer .footerLinks img:hover{
 
     .projectsShow{
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        gap: 6rem;
+        gap: 3rem;
     }
 
     .projects img{
@@ -1227,18 +1265,28 @@ footer .footerLinks img:hover{
     .projectsText{
         margin: 0;
     }
+
+    .projectsBtn{
+        gap: 2rem;
+        padding: 2.6rem 0;
+    }
     
 }
 
 @media (min-width:1100px){
 
     .projectsShow{
-        /* padding-inline: 8rem; */
+        padding-bottom: 2rem;
     }
+    
 
     .projectNo{
         top: -4.5rem;
         left: -2rem;
+    }
+
+    .projectsBtn{
+        gap: 4rem;
     }
 
 }

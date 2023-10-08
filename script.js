@@ -102,6 +102,8 @@ opBtn.addEventListener('click', ()=>{
 
 
 
+// projects horizontal scroll
+
 
 
 
