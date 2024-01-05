@@ -1,4 +1,4 @@
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
 
 @font-face {
@@ -245,7 +245,6 @@ body{
         right: -8rem;
     }
     
-    
 }
 
 
@@ -371,36 +370,57 @@ header img{
 
 
 
+header nav{
+    height: 100%;
+}
 
 
 header .navbar{
-    position: absolute;
+    position: fixed;
     gap: 2rem;
     
-    top: 0%;
-    right: -78%;
+    top: 4rem;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+
     
     height: 100vh;
-    width: 78%;
+    width: 100vw;
     
-    font-size: clamp(1.1rem, 1.1vw, 1.2rem);
     
-    padding: 7.5rem 2rem;
-    backdrop-filter: blur(1rem);
-    
+    padding: 4.5rem 2rem;
     background-image: linear-gradient(180deg, #8f627d44 0%, #d0298d20 100%);
-
+    
+    
     transition: all .4s ease-in-out;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    
+    z-index: 999;
+}
+
+
+@supports (backdrop-filter: blur()){
+
+    header .navbar{
+        background-image: linear-gradient(180deg, rgb(0, 8, 51) 0%, rgb(0, 14, 51) 16%, rgb(0, 7, 40) 36%, rgb(0, 2, 18) 100%);
+        background-image: linear-gradient(180deg,  rgb(0, 8, 51) 0%, #8f627d44 20%, #d0298d20 100%);
+        backdrop-filter: blur(1rem);
+    }
 
 }
 
 
 
-
-
-
 header .navbar.active{
     right: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all .6s ease-in-out;
 }
 
 
@@ -409,10 +429,13 @@ header .navbar.active{
 
 
 header .navbar li{
+    font-size: 1.13rem;
     width: max-content;
     transition: all .31s ease-in-out;
     cursor: pointer;
+    text-shadow: .3rem .3rem 1.3rem black;
 }
+
 header .navbar li:hover{
     color: #ff0099;
     transform: scale(1.03);
@@ -444,20 +467,23 @@ header .navbar li:hover{
     
 
     header .navbar{
-        display: flex;
-        flex-direction: row;
-        
+        opacity: 1;
+        visibility: visible;
+
         position: relative;
         inset: 0;
         
-        padding: 1.5rem 2rem;
+        padding: 0;
         
         background: none;
         width: auto;
-        height: auto;
+        height: 3rem;
         
         transition: all .4s ease-in-out;
+        flex-direction: row;
         
+        align-items: center;
+        justify-content: center;
     }
     
 
@@ -516,7 +542,7 @@ header .navbar li:hover{
     position: relative;
     
     /* background-image: url('/assets/WhatsApp\ Image\ 2023-03-15\ at\ 14.30.48.jpg'); */
-    background-image: url('/assets/WhatsApp\ Image\ 2023-03-15\ at\ 14.30.48.jpg');
+    background-image: url('/assets/IMG-20240105-WA0014.jpg');
     
     height: 14rem;
     aspect-ratio: 1/1;
@@ -672,7 +698,7 @@ header .navbar li:hover{
     .home .container{
         grid-column: 2;
         grid-row: span 2;
-        /* margin-top: -5rem; */
+        margin-top: -5rem;
         height: 100%;
     }
 
@@ -1141,7 +1167,7 @@ footer .footerLinks img:hover{
 }
 
 .projectsShowContainer{
-    margin-top: 3.1rem;
+    margin-top: 1.6rem;
     
     display: grid;
     grid-auto-flow: column;
@@ -1177,6 +1203,7 @@ footer .footerLinks img:hover{
 
 .projectsImg{
     position: relative;
+    z-index: -1;
 }
 
 
